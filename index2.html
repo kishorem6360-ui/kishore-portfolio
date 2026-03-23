@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kishore M | Portfolio</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: 0.3s;
+}
+
+.navbar.scrolled {
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ===== HERO ===== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #00d4ff;
+  object-fit: cover;
+}
+
+.upload-btn {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #00d4ff;
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.typing {
+  color: #00d4ff;
+  height: 22px;
+}
+
+/* ===== BUTTON ===== */
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #00d4ff;
+  color: black;
+  cursor: pointer;
+  position: relative;
+}
+
+.btn:hover {
+  box-shadow: 0 0 15px #00d4ff;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  padding: 60px 20px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.7s;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  color: #00d4ff;
+  margin-bottom: 15px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+/* ===== SKILLS ===== */
+.skill {
+  margin-bottom: 12px;
+}
+
+.bar {
+  height: 6px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 10px;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background: #00d4ff;
+  transition: 1.2s;
+}
+
+/* ===== GRID ===== */
+.projects {
+  display: grid;
+  gap: 15px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  text-align: center;
+}
+
+.social a {
+  margin: 5px;
+  color: #00d4ff;
+  font-size: 14px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar" id="navbar">
+  <div><b>Kishore</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <img id="profileImage" class="profile-img" src="https://via.placeholder.com/150">
+  <input type="file" id="upload" hidden>
+  <label for="upload" class="upload-btn">Upload Photo</label>
+
+  <h1>Kishore M</h1>
+  <div id="typing" class="typing"></div>
+
+  <button class="btn" onclick="scrollToProjects()">View Projects</button>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      I am a BCA student at Kristu Jayanti University passionate about Data Analytics and Web Development.
+      This portfolio represents my certifications, skills, and learning journey.
+    </p>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>Education</h2>
+  <div class="card">
+    <p><b>BCA</b> - Kristu Jayanti University</p>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="skill">
+    <p>Python</p>
+    <div class="bar"><div class="progress" data-width="80%"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>SQL</p>
+    <div class="bar"><div class="progress" data-width="75%"></div></div>
+  </div>
+
+  <div class="skill">
+    <p>Frontend</p>
+    <div class="bar"><div class="progress" data-width="85%"></div></div>
+  </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects & Certifications</h2>
+
+  <div class="projects">
+
+    <div class="card">
+      <h3>NASSCOM Certification</h3>
+      <p>Completed data analytics certification with practical skills.</p>
+    </div>
+
+    <div class="card">
+      <h3>Frontend Certification</h3>
+      <p>Learned HTML, CSS, JavaScript and UI design.</p>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Built interactive portfolio with animations and upload feature.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Contact</h2>
+  <p>📞 7353643967</p>
+  <p>📧 kishorem6360@gmail.com</p>
+
+  <div class="social">
+    <a href="#">LinkedIn</a>
+    <a href="#">GitHub</a>
+  </div>
+
+  <button class="btn" onclick="downloadResume()">Download Resume</button>
+</section>
+
+<footer>
+  © 2026 Kishore M
+</footer>
+
+<script>
+
+/* ===== IMAGE UPLOAD ===== */
+const upload = document.getElementById("upload");
+const profileImage = document.getElementById("profileImage");
+
+// Load saved image
+const savedImage = localStorage.getItem("profileImage");
+if (savedImage) profileImage.src = savedImage;
+
+// Save image
+upload.addEventListener("change", function() {
+  const reader = new FileReader();
+
+  reader.onload = function() {
+    profileImage.src = reader.result;
+    localStorage.setItem("profileImage", reader.result);
+  };
+
+  reader.readAsDataURL(this.files[0]);
+});
+
+/* ===== TYPING EFFECT ===== */
+const text = "Aspiring Data Analyst | BCA Student";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text[i];
+    i++;
+    setTimeout(typeEffect, 50);
+  }
+}
+typeEffect();
+
+/* ===== SCROLL ANIMATION ===== */
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+
+      if (entry.target.id === "skills") {
+        document.querySelectorAll(".progress").forEach(bar => {
+          bar.style.width = bar.dataset.width;
+        });
+      }
+    }
+  });
+}, { threshold: 0.2 });
+
+sections.forEach(section => observer.observe(section));
+
+/* ===== NAVBAR ===== */
+window.addEventListener("scroll", () => {
+  navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+/* ===== SCROLL BUTTON ===== */
+function scrollToProjects() {
+  document.getElementById("projects").scrollIntoView();
+}
+
+/* ===== RESUME ===== */
+function downloadResume() {
+  alert("Add resume link here");
+}
+
+</script>
+
+</body>
+</html>
