@@ -8,7 +8,7 @@ A modern, full-stack personal portfolio website built with React + Vite (fronten
 
 | | Link |
 |---|---|
-| 🌐 **Portfolio Website** |https://e820d008-8184-4b4d-aa47-67cc0d7eb2d0-00-1acjnp7gl5cza.janeway.replit.dev|
+| 🌐 **Portfolio Website** |https://kishore-portfolio.kishorem6360-ui.replit.app|
 | 🗄️ **Database Admin Panel** | https://e820d008-8184-4b4d-aa47-67cc0d7eb2d0-00-1acjnp7gl5cza.janeway.replit.dev/admin |
 
 ---
