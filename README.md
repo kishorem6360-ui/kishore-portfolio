@@ -15,7 +15,7 @@ A modern, full-stack personal portfolio website built with React + Vite (fronten
 
 ## 👤 About
 
-- **Name:** Kishore M
+- **Name:** Kishore 
 - **Role:** Aspiring Data Analyst | BCA Student
 - **College:** Kristu Jayanti University
 - **Email:** kishorem6360@gmail.com
